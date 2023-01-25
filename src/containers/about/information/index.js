@@ -17,14 +17,15 @@ const Information = () => {
                 <div className={classNames(styles.largetext)}>
                     <p className="font-bold">&#92;&#92; Phuc Bui <span className="font-light text-3xl text-neutral-gray">a.k.a @fubbuj</span></p>
                     <p>Ho Chi Minh city, Vietnam</p>
-                    <div className={classNames(styles.links, "flex text-gray text-3xl font-medium")}>
-                        <a href="https://fb.com/fubbuj" className="mr-12">Facebook</a>
-                        <a href="https://instagram.com/fubbuj" className="ml-12">Instagram</a>
+                    <div className="flex text-black text-2xl font-medium mt-24">
+                        <a href="https://fb.com/fubbuj" className="mr-12 hover:underline">Facebook</a>
+                        <a href="https://instagram.com/fubbuj" className="ml-12 hover:underline">Instagram</a>
                     </div>
                 </div>
-                <div className={classNames(styles.mail, "text-darker-white -z-10 p-10 relative")}>
-                    <p className={(classNames(styles.largetext))}>&#62; Contact me:</p>
-                    <a className="text-6xl" href="mailto:fubbuj@gmail.com">fubbuj@gmail.com</a>
+                <div className={classNames(styles.mail, "text-darker-white -z-10 relative flex items-center px-16 -left-16")}>
+                    <div className={(classNames(styles.largetext))}>&#62; Contact me:
+                        <br /><a className="text-6xl" href="mailto:fubbuj@gmail.com">fubbuj@gmail.com</a>
+                    </div>
                 </div>
             </div>
         </section>

@@ -9,4 +9,10 @@
 .mail {
     border-radius: 70px;
     background-color: #191919;
+    width: calc(100% + 64px);
+}
+
+.links:hover {
+    color: #191919;
+    text-decoration: underline;
 }
