@@ -1,0 +1,13 @@
+.introContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name:hover {
+    content: url(../../../assets/images/name-hover.svg);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,21 @@
+.section {
+    position: sticky;
+    z-index: -1;
+}
+
+.overlap {
+    position: relative;
+    z-index: 1;
+    top: -184px;
+}
+.detail {
+    height: 542px;
+    border-radius: 70px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+    transform: scaleX(-1);
+}

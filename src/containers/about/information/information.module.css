@@ -1,0 +1,12 @@
+.para > div > p {
+    padding-top: 12px;
+}
+
+.largetext {
+    font-size: 40px;
+}
+
+.mail {
+    border-radius: 70px;
+    background-color: #191919;
+}

@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@layer base {
+  :root {
+    --gray: #888888;
+    --dark-gray: #4E4E4E;
+    --neutral-gray: #656565;
+    --light-neutral-gray: #999999;
+    --light-gray: #E3E3E3;
+    --black: #121212;
+    --light-black: #191919;
+    --darker-white : #F1F1F1;
+
+  
+    --extra-large-text-size: 64px;
+    --large-text-size: 48px;
+    --text-size: 36px;
+    --medium-text-size: 32px;
+    --regular-text-size: 24px;
+    --small-text-size: 20px;
+  }
+}
+
+html {
+  font-family: 'Space Grotesk', sans-serif;
+  box-sizing: border-box;
+  background-color: var(--light--gray);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font: inherit;
+}
+
+a, button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+*::-webkit-scrollbar-track {
+  transition: all 0.3s;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+q {
+  font-family: 'Silkscreen', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+}
