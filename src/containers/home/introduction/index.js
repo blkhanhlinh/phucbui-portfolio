@@ -11,7 +11,7 @@ const Introduction = () => {
   return (
     <section className="justify-center">
       <div
-        className={classNames(styles.introContainer, "flex flex-col md:flex-row justify-between items-center py-8 md:py-16")}
+        className={classNames(styles.introContainer, "flex flex-col md:flex-row items-start justify-between py-8 md:py-16")}
       >
         <div>
           <h2 className="text-3xl md:text-3xl text-dark-gray mb-6 ">Xin chào, I am</h2>
@@ -25,6 +25,7 @@ const Introduction = () => {
             at Van Lang University, Vietnam
           </p>
         </div>
+        <Image src={Note} alt="note" className={classNames(styles.note)} />
         <div>
           <Image src={Avatar} alt="self-illustration" className={classNames(styles.ava, "md:h-full md:w-48")} />
         </div>

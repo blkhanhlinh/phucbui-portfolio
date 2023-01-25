@@ -6,7 +6,7 @@ import classNames from "classnames";
 
 const Layout = (props) => {
   return (
-    <div className="min-h-screen mx-5 md:mx-16">
+    <div className="min-h-screen mx-5 md:mx-16 xl:mx-32">
         <Navbar />
         <div className={styles.container}>
           <div className={styles.main}>{props.children}</div>
