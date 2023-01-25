@@ -4,14 +4,13 @@ import styles from "./introduction.module.css";
 import Avatar from "../../../assets/images/home-illustration.svg";
 import Name from "../../../assets/images/name.svg";
 import Note from "../../../assets/images/anillustrationofme.svg";
-import Arrow from "../../../assets/icons/black-down-arrow.svg";
 import classNames from "classnames";
 
 const Introduction = () => {
   return (
     <section className="justify-center">
       <div
-        className={classNames(styles.introContainer, "flex flex-col md:flex-row items-start justify-between py-8 md:py-16")}
+        className={classNames(styles.introContainer, "flex flex-col md:flex-row justify-between py-8 md:py-16")}
       >
         <div>
           <h2 className="text-3xl md:text-3xl text-dark-gray mb-6 ">Xin chào, I am</h2>
@@ -25,8 +24,8 @@ const Introduction = () => {
             at Van Lang University, Vietnam
           </p>
         </div>
-        <Image src={Note} alt="note" className={classNames(styles.note)} />
-        <div>
+        <div className={classNames(styles.flexright, "flex gap-1 items-start")}>
+          <Image src={Note} alt="note" className={classNames(styles.note)} />
           <Image src={Avatar} alt="self-illustration" className={classNames(styles.ava, "md:h-full md:w-48")} />
         </div>
       </div>
