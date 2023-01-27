@@ -16,6 +16,9 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/favicon.png" />
         <title>Phuc Bui</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet" />
       </Head>
       <Layout>
         <Component {...pageProps} />

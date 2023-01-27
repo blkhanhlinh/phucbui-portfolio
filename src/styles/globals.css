@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /*@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');*/
 @layer base {
   :root {
     --gray: #888888;
@@ -80,6 +80,7 @@ ul, li {
 }
 
 q {
+  font-family: 'Silkscreen', cursive;
   font-size: 2rem;
   font-weight: 700;
 }
