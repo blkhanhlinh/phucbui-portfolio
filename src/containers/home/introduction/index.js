@@ -8,7 +8,7 @@ import classNames from "classnames";
 
 const Introduction = () => {
   return (
-    <section className="justify-center">
+    <section>
       <div
         className={classNames(styles.introContainer, "flex flex-col md:flex-row justify-between py-8 md:py-16")}
       >
@@ -24,9 +24,9 @@ const Introduction = () => {
             at Van Lang University, Vietnam
           </p>
         </div>
-        <div className={classNames(styles.flexright, "flex gap-1 items-start")}>
+        <div className={classNames(styles.flexright, "flex gap-1 items-start max-md:float-right")}>
           <Image src={Note} alt="note" className={classNames(styles.note)} />
-          <Image src={Avatar} alt="self-illustration" className={classNames(styles.ava, "md:h-full md:w-48")} />
+          <Image src={Avatar} alt="self-illustration" className={classNames(styles.ava, "h-full md:w-full max-sm:w-56")} />
         </div>
       </div>
     </section>

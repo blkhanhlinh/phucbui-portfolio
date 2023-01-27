@@ -1,6 +1,13 @@
 import Layout from '../components/layout';
 import '../styles/globals.css'
 import Head from 'next/head';
+import { Space_Grotesk } from "@next/font/google";
+
+export const spaceGrotesk = Space_Grotesk({
+  weights: [400, 500, 600, 700],
+  variable: '--space-grotesk-font',
+  subsets: ['latin'],
+})
 
 function MyApp({ Component, pageProps }) {
   return (

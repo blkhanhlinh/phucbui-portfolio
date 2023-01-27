@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import React from "react";
 import styles from "./information.module.css";
+
 const Information = () => {
     return (
         <section>

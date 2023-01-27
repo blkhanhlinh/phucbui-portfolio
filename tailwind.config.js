@@ -20,10 +20,6 @@ module.exports = {
         'darker-white' : '#F1F1F1',
       },
     },
-    fontFamily: {
-      default: ['Space Grotesk', 'sans-serif'],
-      quote: ['Silkscreen', 'cursive'],
-    },
     borderRadius: {
       'none': '0',
       'default': '0.75rem',

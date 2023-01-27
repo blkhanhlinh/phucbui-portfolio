@@ -18,6 +18,6 @@
 .viewButton:hover {
     transform: rotate(13.5deg);
     content: url(../../assets/images/view-archive-hover.svg);
-    width: 172px;
-    height: 170px;
+    width: 132px;
+    height: 130px;
 }

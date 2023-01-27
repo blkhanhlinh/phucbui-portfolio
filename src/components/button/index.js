@@ -5,8 +5,6 @@ import styles from './button.module.css';
 const Button = ({
   onClick,
   children,
-  leftIcon,
-  rightIcon
 }) => {
   return (
     <button
@@ -14,9 +12,7 @@ const Button = ({
       className={styles.button}
       onClick={onClick}
     >
-      {leftIcon && <span className={styles.icon}>{leftIcon}</span>}
       {children}
-      {rightIcon && <span className={styles.icon}>{rightIcon}</span>}
     </button>
   );
 };

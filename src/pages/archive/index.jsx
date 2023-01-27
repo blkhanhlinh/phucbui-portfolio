@@ -1,9 +1,12 @@
 import { useRouter } from "next/router";
+import React from "react";
 
-export default function ArchivePage() {
+const ArchivePage = () => {
     return (
         <>
             <h1>Archive Page</h1>
         </>
     );
 }
+
+export default ArchivePage;

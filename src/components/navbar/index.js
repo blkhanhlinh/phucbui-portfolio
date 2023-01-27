@@ -47,9 +47,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/">
-              <a className={styles.navCenter}>@fubbuj</a>
-            </Link>
+            <Link href="/" className={styles.navCenter}>@fubbuj</Link>
           </li>
           <li
             className={classNames(styles.listItem, {
@@ -69,9 +67,7 @@ const Navbar = () => {
       </div>
       <div className="md:hidden flex justify-between items-center w-full">
         <div className={classNames(styles.navCenterMb, "text-sm cursor-pointer")}>
-          <Link href="/">
-            <a>@fubbuj</a>
-          </Link>
+          <Link href="/">@fubbuj</Link>
         </div>
         <div
           tabIndex={-1}
