@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Arrow from "../../../assets/icons/black-down-arrow.svg"
 import classNames from "classnames";
 import React from "react";
+import ViewArchive from "../../../components/view-archive";
 
 const Works = () => {
     const worksSection = useRef(null);
@@ -24,6 +25,7 @@ const Works = () => {
                 <h2>&#92;&#92;</h2>
             </div>
             <p className={classNames(styles.slider, "w-full h-96 bg-light-black rounded-large")}></p>
+            <ViewArchive />
         </section>
     )
 }

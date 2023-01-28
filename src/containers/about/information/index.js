@@ -23,9 +23,9 @@ const Information = () => {
                         <a href="https://instagram.com/fubbuj" className="ml-12 hover:underline">Instagram</a>
                     </div>
                 </div>
-                <div className={classNames(styles.mail, "text-darker-white -z-10 relative flex items-center px-16 -left-16")}>
+                <div className={classNames(styles.mail, "text-darker-white relative flex items-center px-16 -left-16")}>
                     <div className={(classNames(styles.largetext))}>&#62; Contact me:
-                        <br /><a className="text-6xl" href="mailto:fubbuj@gmail.com">fubbuj@gmail.com</a>
+                        <br /><a className="text-6xl hover:underline" href="mailto:fubbuj@gmail.com">fubbuj@gmail.com</a>
                     </div>
                 </div>
             </div>
