@@ -27,7 +27,6 @@
 
 html {
   box-sizing: border-box;
-  background-color: var(--light--gray);
 }
 
 *, *:before, *:after {
@@ -40,6 +39,7 @@ html {
 
 html, body {
   height: 100%;
+  background: var(--light-gray);
 }
 
 body {

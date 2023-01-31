@@ -18,12 +18,14 @@ const Works = () => {
     return (
         <>
             <ViewArchive />
-            <section className="md:h-screen lg:mb-16">
-                <div className="justify-center flex mt-2 md:mt-8">
-                    <Image src={Arrow} alt="scroll to works section" onClick={() => handleClick(worksSection)} className="cursor-pointer" />
-                </div>
-                <div ref={worksSection} className={classNames(styles.slider, "pt-16")}>
-                    <Slider />
+            <div className="justify-center flex mt-2 md:mt-8">
+                <Image src={Arrow} alt="scroll to works section" onClick={() => handleClick(worksSection)} className="cursor-pointer" />
+            </div>
+            <section>
+                <div className="lg:mb-16">
+                    <div ref={worksSection} className={classNames(styles.slider, "pt-16")}>
+                        <Slider />
+                    </div>
                 </div>
             </section>
         </>

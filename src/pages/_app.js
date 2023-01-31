@@ -1,7 +1,6 @@
 import Layout from '../components/layout';
 import '../styles/globals.css'
 import Head from 'next/head';
-import "swiper/css/bundle";
 import { Space_Grotesk } from "@next/font/google";
 import UnderConstruction from '../components/under-construction';
 
