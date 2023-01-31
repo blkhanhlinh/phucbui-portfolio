@@ -45,10 +45,26 @@ export const MobileNav = ({ menuItems, openMenu, setOpenMenu }) => {
 const Navbar = () => {
   const route = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
+  const [lastScrollPos, setLastScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    if(currentScrollPos > lastScrollPos) {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
+    setLastScrollPos(currentScrollPos);
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollPos, visible]);
+
   return (
-    <header className="bg-transparent top-0 right-0 left-0 z-10 max-md:py-7 w-full text-sm items-center justify-between">
+    <header className={classNames(`sticky ${visible ? 'top-0 transition-transform duration-1000 ease-in -translate-y-0' : ''} bg-transparent z-10 max-md:py-7 w-full text-sm items-center justify-between`)}>
       <nav>
-        <MobileNav navItems={navItems} openMenu={openMenu} setOpenMenu={setOpenMenu} />
         <div className="bg-transparent">
           <ul className={classNames(styles.list, styles.collaspse, "hidden md:flex")}>
             <li
@@ -56,7 +72,7 @@ const Navbar = () => {
                 [styles.active]: route.pathname === "/about",
               })}
             >
-              <Link href="/about" onClick={() => setOpenMenu(!openMenu)}>
+              <Link href="/about">
                 <Button>
                   about
                 </Button>

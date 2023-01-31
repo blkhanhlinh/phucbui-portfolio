@@ -1,9 +1,9 @@
 .viewButton {
     cursor: pointer;
-    position: fixed;
-    overflow: hidden;
-    bottom: 0;
+    position: absolute;
     right: 0;
+    bottom: -100vh;
+    overflow: hidden;
     margin: 4rem;
     padding: 4px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -13,11 +13,19 @@
     -o-transition: all 0.3s ease-out;
     -ms-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+    z-index: 100;
 }
 
 .viewButton:hover {
     transform: rotate(13.5deg);
     content: url(../../assets/images/view-archive-hover.svg);
-    width: 132px;
-    height: 130px;
+    width: 138px;
+    height: 135px;
+}
+
+@media (max-width: 768px) {
+    .viewButton {
+        margin: 20px;
+        bottom: -150vh;
+    }
 }

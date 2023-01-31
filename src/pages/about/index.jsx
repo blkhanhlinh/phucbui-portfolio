@@ -1,5 +1,4 @@
 import React from "react";
-import ViewArchive from "../../components/view-archive";
 import Introduction from "../../containers/about/introduction";
 import Quote from "../../containers/about/quote";
 import Expertise from "../../containers/about/expertise";
@@ -11,7 +10,6 @@ function AboutPage() {
             <Introduction />
             <Quote />
             <Expertise />
-            <ViewArchive />
             <Information />
         </>
     );
