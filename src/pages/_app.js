@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" type="image/svg+xml" href="/favicon.png" />
         <title>Phuc Bui</title>
       </Head>
-      {/*<UnderConstruction />*/}
+      <UnderConstruction />
       <Layout>
         <Component {...pageProps} />
       </Layout>
