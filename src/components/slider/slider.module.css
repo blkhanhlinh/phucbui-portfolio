@@ -1,10 +1,25 @@
+.works {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 70px;
+}
 @media screen and (min-width: 768px) {
     .swiper {
-        height: 600px;
+        height: 666px;
         width: 100%;
     }
-    .slideContent {
-        display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .swiper {
+        height: 420px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .swiper {
+        height: 320px;
+        width: 100%;
     }
 }
 .image {

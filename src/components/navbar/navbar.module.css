@@ -22,18 +22,10 @@
     background-size: 100% 2px;
     background-position: 100% 100%;
 }
-
-.active {
-    background: #121212;
-    color: #fff;
-    border-radius: 12PX;
-}
-
 .hamburger {
     display: block;
 }
 
-.hamburger:active,
 .hamburger:hover {
     background-image: url(../../assets/icons/hamburger-hover.svg);
 }
@@ -48,7 +40,6 @@
         width: 100%;
         height: 428px;
         background: #D9D9D9;
-        position: fixed;
         top: 0;
         left: 0;
         transition: height .3s;

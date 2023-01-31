@@ -26,6 +26,6 @@
 @media (max-width: 768px) {
     .viewButton {
         margin: 20px;
-        bottom: -150vh;
+        bottom: -100vh;
     }
 }

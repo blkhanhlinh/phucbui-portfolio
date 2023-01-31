@@ -7,7 +7,7 @@ import Hamburger from "../../assets/icons/hamburger.svg"
 import Button from "../button";
 import styles from "./navbar.module.css";
 
-const navItems = [
+export const menuItems = [
   {
     id: 1,
     name: "about",
@@ -66,7 +66,7 @@ const Navbar = () => {
     <header className={classNames(`sticky ${visible ? 'top-0 transition-transform duration-1000 ease-in -translate-y-0' : ''} bg-transparent z-10 max-md:py-7 w-full text-sm items-center justify-between`)}>
       <nav>
         <div className="bg-transparent">
-          <ul className={classNames(styles.list, styles.collaspse, "hidden md:flex")}>
+          <ul className={classNames(styles.list, "hidden md:flex")}>
             <li
               className={classNames(styles.listItem, {
                 [styles.active]: route.pathname === "/about",

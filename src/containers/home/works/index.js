@@ -22,7 +22,7 @@ const Works = () => {
                 <Image src={Arrow} alt="scroll to works section" onClick={() => handleClick(worksSection)} className="cursor-pointer" />
             </div>
             <section>
-                <div className="lg:mb-16">
+                <div>
                     <div ref={worksSection} className={classNames(styles.slider, "pt-16")}>
                         <Slider />
                     </div>

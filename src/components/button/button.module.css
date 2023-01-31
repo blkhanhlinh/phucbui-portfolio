@@ -7,7 +7,8 @@
     background-color: #fff !important;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
     background-color: #000 !important;
     color: #fff;
     border: none;
