@@ -44,8 +44,8 @@ const Slider = () => {
                 spaceBetween={30}
                 lazy={true}
                 autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
+                    delay: 2500,
+                    disableOnInteraction: false,
                 }}
                 modules={[Lazy, Autoplay, Navigation, EffectCreative]}
                 loop={true}
@@ -68,27 +68,33 @@ const Slider = () => {
                 <SwiperSlide>
                     <div className={classNames(styles.container)}>
                         <Image src={Calendar} alt="Calendar Design / Mixigaming" layout="fill" objectFit="cover" className={styles.image} />
-                        <div className={classNames(styles.slideContent)}>
-                            <h3>Calendar Design / Mixigaming</h3>
-                            <p>School's project</p>
+                        <div className={styles.overlay}>
+                            <div className={classNames(styles.slideContent)}>
+                                <h3>Calendar Design / Mixigaming</h3>
+                                <p>School's project</p>
+                            </div>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className={classNames(styles.container)}>
                         <Image src={UIUX} alt="UI/UX Research / Domino's Pizza" layout="fill" objectFit="cover" className={styles.image} />
-                        <div className={classNames(styles.slideContent)}>
-                            <h3>UI/UX Research / Domino's Pizza</h3>
-                            <p>School's project</p>
+                        <div className={styles.overlay}>
+                            <div className={classNames(styles.slideContent)}>
+                                <h3>UI/UX Research / Domino's Pizza</h3>
+                                <p>School's project</p>
+                            </div>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className={classNames(styles.container)}>
                         <Image src={UIUX} alt="UI/UX Research / Domino's Pizza" layout="fill" objectFit="cover" className={styles.image} />
-                        <div className={classNames(styles.slideContent)}>
-                            <h3>Magazine Design / Chuyen Nha Fan</h3>
-                            <p>School's project</p>
+                        <div className={styles.overlay}>
+                            <div className={classNames(styles.slideContent)}>
+                                <h3>Magazine Design / Chuyen Nha Fan</h3>
+                                <p>School's project</p>
+                            </div>
                         </div>
                     </div>
                 </SwiperSlide>
