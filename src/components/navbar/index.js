@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import Hamburger from "../../assets/icons/hamburger.svg"
+import HamburgerReverse from "../../assets/icons/hamburger-hover.svg"
 import Button from "../button";
 import styles from "./navbar.module.css";
 
@@ -25,18 +26,41 @@ export const MobileNav = ({ menuItems, openMenu, setOpenMenu }) => {
   const menuContainerRef = useRef(null);
 
   return (
-    <div className={classNames(`absolute top-0 left-0 w-screen bg-white transition-transform ${openMenu ? "-translate-y-0" : "-translate-y-full"} duration-300 ease-in-out filter`)}>
+    <div className={classNames(`absolute top-0 -left-5 w-screen bg-white transition-transform ${openMenu ? "-translate-y-0" : "-translate-y-full"} duration-300 ease-in-out filter md:hidden`)}>
       <div className={styles.menuContainer} ref={menuContainerRef}>
-        <ul className={menuItems} ref={menuRef}>
-          {menuItems?.map((item) => {
-            const { id, name, path } = item;
-            return (
-              <li key={id} className={styles.menuItem}>
-                <Link href={path}>{name}</Link>
-              </li>
-            );
-          })}
-        </ul>
+        <div className={classNames(styles.menuHeader, "w-screen flex justify-between pt-6 text-4xl font-light")}>
+          <div className={classNames(styles.menuTitle, "px-5")}>
+            <Link href="/"className={styles.navCenter}>@fubbuj</Link>
+          </div>
+          <div
+            id="hamburger"
+            tabIndex={-1}
+            className={classNames(styles.hamburgerReverse, "cursor-pointer px-5")}
+            onClick={() => setOpenMenu(!openMenu)}
+          >
+            <Image
+              src={HamburgerReverse}
+              alt="hamburger"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col pb-8 ml-auto mr-5">
+          <ul className={menuItems} ref={menuRef}>
+            {menuItems?.map((item) => {
+              const { id, name, path } = item;
+              return (
+                <li key={id} className="text-2xl font-light block">
+                  <Link 
+                    className="float-right py-1" href={path}
+                    onClick={() => setOpenMenu(!openMenu)}
+                  >
+                    <Button>{name}</Button>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   )
@@ -64,6 +88,7 @@ const Navbar = () => {
 
   return (
     <header className={classNames(`sticky ${visible ? 'top-0 transition-transform duration-1000 ease-in -translate-y-0' : ''} bg-transparent z-10 max-md:py-7 w-full text-sm items-center justify-between`)}>
+      <MobileNav menuItems={menuItems} openMenu={openMenu} setOpenMenu={setOpenMenu} />
       <nav>
         <div className="bg-transparent">
           <ul className={classNames(styles.list, "hidden md:flex")}>

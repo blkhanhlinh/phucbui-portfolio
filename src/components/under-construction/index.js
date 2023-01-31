@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const UnderConstruction = () => {
     return (
-        <div className={classNames(styles.image, "fixed scale-110 z-50")}></div>
+        <div className={classNames(styles.image, "fixed scale-110 -z-50")}></div>
     );
 }
 export default UnderConstruction;
