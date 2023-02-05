@@ -30,7 +30,12 @@ export const MobileNav = ({ menuItems, openMenu, setOpenMenu }) => {
       <div className={styles.menuContainer} ref={menuContainerRef}>
         <div className={classNames(styles.menuHeader, "w-screen flex justify-between pt-6 text-4xl font-light")}>
           <div className={classNames(styles.menuTitle, "px-5")}>
-            <Link href="/"className={styles.navCenter}>@fubbuj</Link>
+            <Link 
+              href="/"className={styles.navCenter}
+              onClick={() => setOpenMenu(!openMenu)}
+            >
+              @fubbuj
+            </Link>
           </div>
           <div
             id="hamburger"
@@ -87,7 +92,7 @@ const Navbar = () => {
   }, [lastScrollPos, visible]);
 
   return (
-    <header className={classNames(`sticky ${visible ? 'top-0 transition-transform duration-1000 ease-in -translate-y-0' : ''} bg-transparent z-10 max-md:py-7 w-full text-sm items-center justify-between`)}>
+    <header className={classNames(`sticky ${visible ? 'top-0 transition-transform duration-300 ease-in -translate-y-0' : '-top-0 transition-transform duration-300 ease-out -translate-y-full'} bg-transparent z-10 max-md:py-7 w-full text-sm items-center justify-between`)}>
       <MobileNav menuItems={menuItems} openMenu={openMenu} setOpenMenu={setOpenMenu} />
       <nav>
         <div className="bg-transparent">
