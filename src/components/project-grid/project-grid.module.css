@@ -9,21 +9,19 @@
     border: 1px solid #121212;
 }
 
-.cardImage .image:hover {
+.card:hover .cardImage {
     position: relative;
     height: 100%;
     transition: 0.6s cubic-bezier(.17,-0.31,.3,1.32);
     object-fit: cover;
 }
 
-.cardImage:hover {
+.image:hover {
     position: relative;
-    height: 80%;
-    overflow: hidden;
+    height: 100%;
 }
 
-#smooth-wrapper{
-    webkit-transition: all .6s cubic-bezier(.55, 0, .1, 1);
+#smooth-wrapper {
     -moz-transition: all .6s cubic-bezier(.55, 0, .1, 1);
     -ms-transition: all .6s cubic-bezier(.55, 0, .1, 1);
     -o-transition: all .6s cubic-bezier(.55, 0, .1, 1);
