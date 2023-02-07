@@ -6,8 +6,8 @@ import PersonalWorks from "../../containers/archive/personal-works";
 const ArchivePage = () => {
     return (
         <>
-            <Projects />
-            <PersonalWorks />
+            {/*<Projects />
+            <PersonalWorks />*/}
         </>
     );
 }

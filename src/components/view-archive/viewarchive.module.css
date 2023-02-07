@@ -2,7 +2,7 @@
     cursor: pointer;
     position: absolute;
     right: 0;
-    bottom: -100vh;
+    bottom: -0%;
     overflow: hidden;
     margin: 4rem;
     padding: 4px;
@@ -19,8 +19,8 @@
 .viewButton:hover {
     transform: rotate(13.5deg);
     content: url(../../assets/images/view-archive-hover.svg);
-    width: 138px;
-    height: 135px;
+    width: 135px;
+    height: 132px;
 }
 
 @media (max-width: 768px) {

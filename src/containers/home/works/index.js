@@ -17,7 +17,6 @@ const Works = () => {
     }
     return (
         <>
-            <ViewArchive />
             <div className="justify-center flex mt-2 md:mt-8">
                 <Image src={Arrow} alt="scroll to works section" onClick={() => handleClick(worksSection)} className="cursor-pointer" />
             </div>
@@ -26,6 +25,7 @@ const Works = () => {
                     <div ref={worksSection} className={classNames(styles.slider, "pt-16")}>
                         <Slider />
                     </div>
+                    <ViewArchive />
                 </div>
             </section>
         </>

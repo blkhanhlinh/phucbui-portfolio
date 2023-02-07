@@ -1,6 +1,5 @@
 import styles from "./contact.module.css";
 import Image from "next/image";
-import { useRef } from "react";
 import classNames from "classnames";
 import Illustration1 from "../../../assets/images/self-illustration1.svg";
 

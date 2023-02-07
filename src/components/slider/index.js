@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import classNames from "classnames";
-import Calendar from "/public/images/calendar-design.png";
-import UIUX from "/public/images/uiux.png";
 import styles from "./slider.module.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,24 +12,24 @@ import "swiper/css/lazy";
 
 import { EffectCreative } from "swiper";
 
-const projects = [
+export const projects = [
     {
         id: 1,
         name: "Calendar Design / Mixigaming",
         type: "School's project",
-        image: { Calendar },
+        image: "/images/calendar-design.png",
     },
     {
         id: 2,
         name: "UI/UX Research / Domino's Pizza",
         type: "School's project",
-        image: { UIUX },
+        image: "/images/uiux.png",
     },
     {
         id: 3,
         name: "Magazine Design / Chuyen Nha Fan",
         type: "School's project",
-        image: { Calendar },
+        image: "/images/uiux.png",
     }
 ];
 
@@ -65,39 +63,17 @@ const Slider = () => {
                 }}
                 className={classNames(styles.swiper, styles.works)}
             >
-                <SwiperSlide>
-                    <figure className={classNames(styles.container)}>
-                        <Image src={Calendar} alt="Calendar Design / Mixigaming" layout="fill" objectFit="cover" className={styles.image} />
-                        <figcaption className={styles.overlay}>
-                            <div className={classNames(styles.slideContent)}>
-                                <h3>Calendar Design / Mixigaming</h3>
-                                <p>School's project</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <figure className={classNames(styles.container)}>
-                        <Image src={UIUX} alt="UI/UX Research / Domino's Pizza" layout="fill" objectFit="cover" className={styles.image} />
-                        <figcaption className={styles.overlay}>
-                            <div className={classNames(styles.slideContent)}>
-                                <h3>UI/UX Research / Domino's Pizza</h3>
-                                <p>School's project</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <figure className={classNames(styles.container)}>
-                        <Image src={UIUX} alt="UI/UX Research / Domino's Pizza" layout="fill" objectFit="cover" className={styles.image} />
-                        <figcaption className={styles.overlay}>
-                            <div className={classNames(styles.slideContent)}>
-                                <h3>Magazine Design / Chuyen Nha Fan</h3>
-                                <p>School's project</p>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </SwiperSlide>
+                {projects.map((project) => (
+                    <SwiperSlide key={project.id} className="rounded-large border-2 border-black">
+                        <figure>
+                            <Image src={project.image} alt={project.name} layout="fill" objectFit="cover" className={classNames(styles.image)}/>
+                            <figcaption className={classNames(styles.slideContent, styles.overlay, "border-2 border-black")}>
+                                <h3>{project.name}</h3>
+                                <p>{project.type}</p>
+                            </figcaption>
+                        </figure>
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </>
     )
