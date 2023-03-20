@@ -26,13 +26,12 @@
     display: block;
 }
 
-.hamburger:hover {
+.hamburger:hover,
+.hamburger:focus,
+.hamburger:active {
     background-image: url(../../assets/icons/hamburger-hover.svg);
 }
 
-.hamburgerReverse {
-    display: block;
-}
 .menuContainer{
     box-sizing: border-box;
     display: flex;

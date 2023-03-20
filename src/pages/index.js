@@ -1,8 +1,9 @@
 import HomePage from "./home";
+import { SmoothScrollProvider } from "../contexts/SmoothScroll";
 export default function Home() {
   return (
-    <div className="scroll-smooth">
+    <SmoothScrollProvider options={{smooth: true}}>
       <HomePage />
-    </div>
+    </SmoothScrollProvider>
   );
 }

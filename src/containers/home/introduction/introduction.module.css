@@ -1,13 +1,20 @@
-.introContainer {
-    display: flex;
-    justify-content: space-between;
+.intro {
+    height: calc(100vh - 84px);
+}
+
+.ava {
+    transform-style: preserve-3d;
+}
+
+@media (max-width: 768px) {
+    .ava {
+        height: auto;
+        display: flex;
+        align-self: flex-end;
+    }
 }
 
 .name:hover {
     content: url(../../../assets/images/name-hover.svg);
-}
-
-.text {
-    display: flex;
-    flex-direction: column;
+    transition: 0.3s ease-in-out;
 }

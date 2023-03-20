@@ -1,81 +1,71 @@
-import React, { useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import classNames from "classnames";
-import styles from "./slider.module.css";
+import styles from "./slider.module.css"
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Lazy, Autoplay, Navigation } from "swiper";
-import "swiper/swiper.min.css";
-import "swiper/css/effect-creative";
-import "swiper/css/navigation";
-import "swiper/css/lazy";
-
-import { EffectCreative } from "swiper";
-
-export const projects = [
+export const data = [
     {
         id: 1,
-        name: "Calendar Design / Mixigaming",
-        type: "School's project",
-        image: "/images/calendar-design.png",
+        name: "Visual lyrical music video",
+        brand: "Song name: 120 Degrees",
+        type: "Type: Team project",
+        image: "/images/uiux.png",
+        link: "/works/visual-lyrical-music-video",
     },
     {
         id: 2,
-        name: "UI/UX Research / Domino's Pizza",
-        type: "School's project",
-        image: "/images/uiux.png",
+        name: "Calendar Design Project",
+        brand: "Brand: Mixigaming",
+        type: "Type: Personal project,",
+        type2: "school project.",
+        image: "/images/calendar-design.png",
+        link: "/works/calendar-design",
     },
     {
         id: 3,
-        name: "Magazine Design / Chuyen Nha Fan",
-        type: "School's project",
+        name: "Magazine Design Project",
+        brand: "Topic: Marvel's movies, fan",
+        type: "Type: Personal project,",
+        type2: "school project.",
         image: "/images/uiux.png",
+        link: "/works/magazine-design-project",
     }
 ];
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Slider = () => {
-    const navigationNextRef = useRef();
+    useEffect(() => {
+        const sections = gsap.utils.toArray(".panel");
+
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".container",
+                pin: true,
+                invalidateOnRefresh: true,
+                anticipatePin: 1,
+                scrub: 1.23,
+                end: () => "+=" + document.querySelector(".container").offsetWidth
+            }
+        });
+    }, []);
+    
     return (
-        <>
-            <Swiper
-                slidesPerView={1}
-                spaceBetween={30}
-                lazy={true}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                }}
-                modules={[Lazy, Autoplay, Navigation, EffectCreative]}
-                loop={true}
-                grabCursor={true}
-                effect={"creative"}
-                creativeEffect={{
-                    prev: {
-                        shadow: false,
-                        translate: [0, 0, -400],
-                    },
-                    next: {
-                        translate: ["100%", 0, 0],
-                    },
-                }}
-                onBeforeInit={(swiper) => {
-                    swiper.params.navigation.nextEl = navigationNextRef.current;
-                }}
-                className={classNames(styles.swiper, styles.works)}
-            >
-                {projects.map((project) => (
-                    <SwiperSlide key={project.id} className="rounded-large border-2 border-black">
-                        <figure>
-                            <Image src={project.image} alt={project.name} layout="fill" objectFit="cover" className={classNames(styles.image)}/>
-                            <figcaption className={classNames(styles.slideContent, styles.overlay, "border-2 border-black")}>
-                                <h3>{project.name}</h3>
-                                <p>{project.type}</p>
-                            </figcaption>
-                        </figure>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </>
+        <div className={classNames(styles.slider, "container")}>
+            {data.map((project, index) => {
+                const { id, image, name } = project;
+                return (
+                    <article key={id} className="panel">
+                        <Image src={image} alt={name} width={380} height={283.92}/>
+                        <h3 className="text-2xl font-bold"></h3>
+                    </article>
+                )
+            })}
+        </div>
     )
 }
 

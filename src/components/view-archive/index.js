@@ -9,8 +9,8 @@ export default function ViewArchive() {
     return (
         <>
             <div>
-                <Link href="/archive" className={classNames(styles.viewButton, "absolute")}>
-                    <Image src={ViewArchiveButton} alt="view archive" width={124} height={121} />  
+                <Link href="/archive" className={classNames(styles.viewButton)}>
+                    <Image src={ViewArchiveButton} alt="view archive"/>  
                 </Link>
             </div>
         </>

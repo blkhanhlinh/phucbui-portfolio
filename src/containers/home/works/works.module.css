@@ -1,3 +1,4 @@
-.slider {
-    object-fit: cover;
+.links > a:hover {
+    color: #121212;
+    text-decoration-line: underline;
 }

@@ -7,7 +7,7 @@ import { spaceGrotesk } from "../../pages/_app";
 
 const Layout = (props) => {
   return (
-    <div className={`min-h-screen mx-5 md:mx-16 ${spaceGrotesk.className}`}>
+    <div className={`min-h-screen mx-6 md:mx-16 ${spaceGrotesk.className}`}>
         <Navbar />
         <div className={styles.container}>
           <div className={styles.main}>{props.children}</div>

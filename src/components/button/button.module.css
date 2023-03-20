@@ -13,4 +13,5 @@
     color: #fff;
     border: none;
     height: 34px;
+    transition: 0.3s ease-in-out; 
 }
