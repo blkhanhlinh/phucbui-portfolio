@@ -10,12 +10,7 @@
 }
 .detail {
     height: 542px;
-    border-radius: 70px;
     overflow: hidden;
     display: flex;
     flex-direction: row;
-}
-
-.image {
-    transform: scaleX(-1);
 }

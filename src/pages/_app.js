@@ -15,13 +15,13 @@ export const spaceGrotesk = Space_Grotesk({
 function MyApp({ Component, pageProps }) {
   return (
     <main data-scroll-container>
-      <Loading/>
       <Head>
         <meta charSet="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/favicon.png" />
         <title>Phuc Bui</title>
       </Head>
       <UnderConstruction />
+      <Loading />
       <Layout>
         <Component {...pageProps} />
       </Layout>

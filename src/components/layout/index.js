@@ -2,7 +2,6 @@ import Navbar from "../navbar";
 import Footer from "../footer";
 import React from 'react';
 import styles from './layout.module.css';
-import classNames from "classnames";
 import { spaceGrotesk } from "../../pages/_app";
 
 const Layout = (props) => {
