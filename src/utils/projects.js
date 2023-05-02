@@ -1,0 +1,41 @@
+export const Data = [
+    {
+        id: 1,
+        title: "Visual Lyrics Video | Reverse That",
+        name: "Visual lyrical music video",
+        brand: "Song name: 120 Degrees",
+        type: "Type: Team project",
+        image: "/images/120-degrees-lyrics-video.png",
+        link: "/works/visual-lyrical-music-video",
+    },
+    {
+        id: 2,
+        title: "Visual Lyrics Video | 120 Degrees",
+        name: "UI/UX Design Project",
+        brand: "Topic: Online shopping,",
+        type: "Type: Personal project,",
+        type2: "school project.",
+        image: "/images/120-degrees-lyrics-video.png",
+        link: "/works/visual-lyrical-music-video",
+    },
+    {
+        id: 3,
+        title: "Mixi Calendar | Design Project",
+        name: "Calendar Design Project",
+        brand: "Brand: Mixigaming",
+        type: "Type: Personal project,",
+        type2: "school project.",
+        image: "/images/calendar-design.png",
+        link: "/works/calendar-design",
+    },
+    {
+        id: 4,
+        title: "Chuyện Nhà Fan Magazine | Design Project",
+        name: "Magazine Design Project",
+        brand: "Topic: Marvel's movies, fan",
+        type: "Type: Personal project,",
+        type2: "school project.",
+        image: "/images/magazine.png",
+        link: "/works/magazine-design-project",
+    }
+  ];

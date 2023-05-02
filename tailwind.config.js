@@ -30,6 +30,19 @@ module.exports = {
     },
     fontFamily: {
       sans: ['var(--font-Space_Grotesk)', ...fontFamily.sans],
+      pixel: ['var(--font-)']
+    },
+    fontSize: {
+      'xs': '16px',
+      'sm': '22px',
+      'base': '24px',
+      'lg': '32px',
+      'xl': '36px',
+      '2xl': '48px',
+      '3xl': '64px',
+    },
+    dropShadow: {
+      default: '0px 4px 4px rgba(0, 0, 0, 0.25)',
     },
   },
 

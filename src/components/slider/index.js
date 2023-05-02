@@ -1,72 +1,72 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import Image from "next/image";
-import classNames from "classnames";
-import styles from "./slider.module.css"
-import { gsap } from "gsap/dist/gsap";
+import Link from "next/link";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { Data } from "../../utils/projects";
+import Polygon from "../../assets/icons/polygon.svg"
+import ViewArchive from "../../assets/images/view-archive.svg"
+import classNames from "classnames";
 
-export const data = [
-    {
-        id: 1,
-        name: "Visual lyrical music video",
-        brand: "Song name: 120 Degrees",
-        type: "Type: Team project",
-        image: "/images/uiux.png",
-        link: "/works/visual-lyrical-music-video",
-    },
-    {
-        id: 2,
-        name: "Calendar Design Project",
-        brand: "Brand: Mixigaming",
-        type: "Type: Personal project,",
-        type2: "school project.",
-        image: "/images/calendar-design.png",
-        link: "/works/calendar-design",
-    },
-    {
-        id: 3,
-        name: "Magazine Design Project",
-        brand: "Topic: Marvel's movies, fan",
-        type: "Type: Personal project,",
-        type2: "school project.",
-        image: "/images/uiux.png",
-        link: "/works/magazine-design-project",
-    }
-];
-
-gsap.registerPlugin(ScrollTrigger);
-
-const Slider = () => {
+function ScrollSection() {
+    const sectionRef = useRef(null);
+    const triggerRef = useRef(null);
+  
+    gsap.registerPlugin(ScrollTrigger);
+  
     useEffect(() => {
-        const sections = gsap.utils.toArray(".panel");
-
-        gsap.to(sections, {
-            xPercent: -100 * (sections.length - 1),
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".container",
-                pin: true,
-                invalidateOnRefresh: true,
-                anticipatePin: 1,
-                scrub: 1.23,
-                end: () => "+=" + document.querySelector(".container").offsetWidth
-            }
-        });
+      const pin = gsap.fromTo(
+        sectionRef.current,
+        {
+          translateX: 0,
+        },
+        {
+          translateX: "-1440px",
+          ease: "none",
+          duration: 1,
+          scrollTrigger: {
+            trigger: triggerRef.current,
+            start: "top top",
+            end: "2000 top",
+            invalidateOnRefresh: true,
+            anticipatePin: 1,
+            scrub: 1.2,
+            pin: true,
+          },
+        }
+      );
+      return () => {
+        pin.kill();
+      };
     }, []);
-    
+  
     return (
-        <div className={classNames(styles.slider, "container")}>
-            {data.map((project, index) => {
-                const { id, image, name } = project;
+      <section className="relative py-8">
+        <div ref={triggerRef}>
+        <h1 className="text-lg md:text-2xl uppercase font-bold py-12">works</h1>
+          <div ref={sectionRef} className="scroll-section-inner">
+            {Data.map((project) => {
+                const { id, image, title } = project;
                 return (
-                    <article key={id} className="panel">
-                        <Image src={image} alt={name} width={380} height={283.92}/>
-                        <h3 className="text-2xl font-bold"></h3>
+                    <article key={id} className="scroll-section rounded-default relative">
+                        <Image src={image} alt={title} width={530} height={396} className="scroll-section-img rounded-default drop-shadow-default"/>
+                        <h3 className="text-base font-bold absolute bg-white w-full text-center bottom-0 py-3 rounded-default">{title}</h3>
                     </article>
                 )
             })}
+          </div>
+          <Link className="flex flex-row gap-7 absolute bottom-0 right-0" href="/archive">
+            <div className="flex flex-row gap-2 self-end pb-2">
+              <p className="text-gray font-bold see-more">see more</p>
+              <Image src={Polygon} alt="arrow" className="-rotate-90"/>
+            </div>
+            <div className="h-36 w-36">
+              <Image src={ViewArchive} alt="View Archive" className="view-archive"/>
+            </div>
+          </Link>
         </div>
-    )
-}
-
-export default Slider;
+      </section>
+    );
+  }
+  
+export default ScrollSection;

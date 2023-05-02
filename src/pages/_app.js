@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { Space_Grotesk } from "@next/font/google";
 require('../styles/style.css')
 import UnderConstruction from '../components/under-construction';
+import { Loading } from '../utils/loading';
 
 export const spaceGrotesk = Space_Grotesk({
   weights: [400, 500, 600, 700],
@@ -14,6 +15,7 @@ export const spaceGrotesk = Space_Grotesk({
 function MyApp({ Component, pageProps }) {
   return (
     <main data-scroll-container>
+      <Loading/>
       <Head>
         <meta charSet="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/favicon.png" />
