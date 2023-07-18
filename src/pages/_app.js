@@ -20,11 +20,11 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" type="image/svg+xml" href="/favicon.png" />
         <title>Phuc Bui</title>
       </Head>
-      <UnderConstruction />
+      {/* <UnderConstruction /> */}
       <Loading />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      {/* <Layout> */}
+      <Component {...pageProps} />
+      {/* </Layout> */}
     </main>
   );
 }
