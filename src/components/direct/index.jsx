@@ -11,10 +11,9 @@ function Direct() {
   }, []);
 
   return (
-    <div className={`flex justify-center items-center h-screen ${spaceGrotesk.className}`}>
-      <div className="text-center">
-        <p className="text-2xl font-bold f">Redirecting to Figma Prototype...</p>
-      </div>
+    <div className={`flex justify-center items-center h-screen flex-col ${spaceGrotesk.className}`}>
+        <q className="text-2xl uppercase">This site is under construction</q>
+        <p className="text-xl mt-10">Directing to Figma prototype...</p>
     </div>
   );}
 
