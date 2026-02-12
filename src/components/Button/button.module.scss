@@ -1,16 +1,6 @@
 .button {
   border: 1px solid #121212;
   border-radius: 12px;
-  gap: 10px;
   padding: 0 12.5px;
-  background-color: #fff !important;
-
-  &:hover,
-  &:focus {
-    background-color: #000 !important;
-    color: #fff;
-    border: none;
-    height: 34px;
-    transition: 0.3s ease-in-out;
-  }
+  background-color: #fff;
 }
