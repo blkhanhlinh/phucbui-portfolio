@@ -1,13 +1,11 @@
-import react from "react";
+import react from 'react'
 
 const ProjectsPage = () => {
-    return (
-        <>
-            <section>
-                Projects page
-            </section>
-        </>
-    )
+  return (
+    <>
+      <section>Projects page</section>
+    </>
+  )
 }
 
-export default ProjectsPage;
+export default ProjectsPage

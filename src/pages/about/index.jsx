@@ -1,19 +1,18 @@
-import React from "react";
-import Introduction from "../../containers/about/introduction";
-import Quote from "../../containers/about/quote";
-import Expertise from "../../containers/about/expertise";
-import Information from "../../containers/about/information";
-import { SmoothScrollProvider } from "../../contexts/SmoothScroll";
+import React from 'react'
+import Expertise from '@/containers/about/expertise'
+import Information from '@/containers/about/information'
+import Introduction from '@/containers/about/introduction'
+import Quote from '@/containers/about/quote'
 
 function AboutPage() {
-    return (
-        <SmoothScrollProvider options={{smooth: true}}>
-            <Introduction />
-            <Quote />
-            <Expertise />
-            <Information />
-        </SmoothScrollProvider>
-    );
+  return (
+    <>
+      <Introduction />
+      <Quote />
+      <Expertise />
+      <Information />
+    </>
+  )
 }
 
-export default AboutPage;
+export default AboutPage

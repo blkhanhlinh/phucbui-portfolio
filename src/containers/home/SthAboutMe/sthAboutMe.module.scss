@@ -1,0 +1,9 @@
+.ava {
+  transform-style: preserve-3d;
+
+  @media (max-width: 768px) {
+    height: auto;
+    display: flex;
+    align-self: flex-end;
+  }
+}

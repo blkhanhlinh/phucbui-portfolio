@@ -1,0 +1,33 @@
+.cardImage {
+  cursor: pointer;
+}
+
+.image {
+  height: 110px;
+  width: 420px;
+  object-fit: fill;
+  border: 1px solid #121212;
+
+  &:hover {
+    position: relative;
+    height: 100%;
+  }
+}
+
+.card:hover .cardImage {
+  position: relative;
+  height: 100%;
+  transition: 0.6s cubic-bezier(0.17, -0.31, 0.3, 1.32);
+  object-fit: cover;
+}
+
+#smooth-wrapper {
+  -moz-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  -ms-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.cardImage #smooth-wrapper {
+  transform: scale(0.9);
+}

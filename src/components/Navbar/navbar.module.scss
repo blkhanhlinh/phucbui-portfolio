@@ -1,0 +1,50 @@
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 36px 0;
+  font-size: 22px;
+}
+
+.hamburger {
+  display: block;
+  padding: 4px 12px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #121212;
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.5rem;
+  min-height: 675px;
+  border-bottom-left-radius: 192px;
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.menuItemButton {
+  font-size: 3rem;
+  font-weight: 500;
+  color: white;
+  padding: 0.5rem 2.5rem;
+  border: 2px solid white;
+  border-radius: 180px;
+}
+
+.menuFooter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: flex-end;
+  color: white;
+  padding-bottom: 5rem;
+}
