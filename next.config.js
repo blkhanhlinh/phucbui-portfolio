@@ -7,7 +7,7 @@ const nextConfig = {
       {
         source: '/:path*',
         destination:
-          'https://www.figma.com/proto/LYCHX7sPqp7SFRoAJ5YssF/Portfolio-Website?page-id=629%3A4599&node-id=1998-265&viewport=-655%2C20557%2C0.28&t=ROXGnJrwWvwM3HUB-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1549%3A704&show-proto-sidebar=1',
+          'https://www.figma.com/proto/LYCHX7sPqp7SFRoAJ5YssF/Portfolio-Website?page-id=629%3A4599&node-id=1549-704&viewport=-655%2C20557%2C0.28&t=sWT04wAdasWkfkGI-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1549%3A704&show-proto-sidebar=1',
         permanent: false,
       },
     ]
